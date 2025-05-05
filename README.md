@@ -71,11 +71,6 @@ Angular front-end application for the Chat-Server, providing a responsive and in
 
 **Tech Stack:** Angular, TypeScript, RxJS, Socket.IO Client, Bootstrap
 
-## 🎓 Education
-- B.E. in Information Science (59.20%) - B.E.C., Bagalkot (2024)
-- P.U.C. (79.50%) - Konnur PU College, Yallati, Jamkhandi (2018)
-- S.S.L.C. (71.68%) - P.P.E.A. High School Rampur, Jamkhandi (2016)
-
 ## 📜 Certifications
 - [The Web Developer Boot Camp](https://www.udemy.com/certificate/UC-5cca9da4-7354-4f8b-adab-3e244ac35e7a/)
 - [Angular - The Complete Guide](https://www.udemy.com/certificate/UC-a2e5b19d-c06b-492f-b67d-f4db0818214e/)
