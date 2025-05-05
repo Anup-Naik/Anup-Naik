@@ -1,7 +1,7 @@
 # Hi there, I'm Anup Naik 👋
 
 ## About Me
-Full-stack Web Developer specializing in MEAN/MERN stack development. I'm passionate about building robust, user-friendly web applications with clean architecture and efficient performance. I enjoy working with both front-end and back-end technologies to deliver comprehensive solutions to real-world problems.
+Full-stack Web Developer specializing in MEAN stack development. I like building robust, user-friendly web applications with clean architecture and efficient performance. I enjoy working with both front-end and back-end technologies.
 
 🔭 I'm currently working on enhancing my full-stack development skills  
 🌱 I'm currently learning advanced Angular concepts and exploring real-time communication technologies  
@@ -9,7 +9,6 @@ Full-stack Web Developer specializing in MEAN/MERN stack development. I'm passio
 💬 Ask me about JavaScript, Angular, Node.js, MongoDB, or Real-time applications  
 📫 How to reach me: anupnaik54810@gmail.com  
 🌍 Based in Karnataka, India  
-⚡ Fun fact: I'm passionate about building applications that solve real-world problems!
 
 ## 🛠️ Technologies & Tools
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=javascript&logoColor=white&color=2bbc8a)
