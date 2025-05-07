@@ -19,10 +19,9 @@
 
       &.collapse {
         @include mixins.glass;
-        @include mixins.bgImg;
-        // background-color: var(--tertiary);
+        @include mixins.bgImg(overlay,url('/img/leaves.webp'),var(--opaque-background));
         max-width: 10%;
-        max-height: 70rem;
+        max-height: 60rem;
         border-radius: 5rem;
         & > * {
           // width: 0%;
@@ -55,7 +54,7 @@
         max-height: 80rem;
   
         &.collapse {
-          max-width: 40%;
+          max-width: 90%;
           max-height: 5rem;
         }
       }

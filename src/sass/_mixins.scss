@@ -34,13 +34,14 @@
 }
 
 @mixin bgImg(
+  $mode: overlay,
   $url: var(--bg-image),
   $overlay: var(--background-color),
   $xpos: center,
   $ypos: center
 ) {
   background: $url no-repeat $xpos $ypos/cover, $overlay;
-  background-blend-mode: color-dodge;
+  background-blend-mode: $mode;
 }
 
 @mixin customScrollbar($width: thin) {
