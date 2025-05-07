@@ -28,9 +28,9 @@ main {
 @media (max-width: 768px) {
   main {
     & section {
-      max-width: 95%;
+      max-width: 98%;
       min-height: 70vh;
-      padding: 6rem 4rem;
+      padding: 6rem 3rem;
 
       & .section-title {
         text-align: center;
@@ -42,7 +42,8 @@ main {
 @media (max-width: 568px) {
   main {
     & section {
-      padding: 6rem 2rem;
+      max-width: 100%;
+      padding: 4rem 0.5rem;
     }
   }
 }
