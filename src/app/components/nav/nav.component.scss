@@ -1,0 +1,50 @@
+@use "../../../sass/mixins";
+:host {
+  width: 100%;
+}
+nav {
+  @include mixins.glass;
+  
+  & .nav-container {
+    @include mixins.glass;
+    padding-block: 0.5rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    @include mixins.flexMixin(row,space-between);
+
+    & .brand {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-left: 1rem;
+      letter-spacing: 1px;
+      @include mixins.gradText(
+        var(--brand-gradient-start),
+        var(--brand-gradient-end)
+      );
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    & .nav-container {
+      & .brand {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  nav {
+    & .nav-container {
+      & .nav__btn{
+        font-size: 2rem;
+        padding: .2rem 0.5rem;
+      }
+      & .brand {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}

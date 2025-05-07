@@ -1,0 +1,63 @@
+@use "../../../../sass/mixins";
+#project {
+  padding-bottom: 10rem;
+  & .project-container {
+    @include mixins.flexMixin(row);
+
+    & .card {
+      margin: 1rem;
+      overflow: hidden;
+      max-height: 80rem;
+      max-width: 60%;
+      transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      & > * {
+        opacity: 1;
+        filter: blur(0px);
+        visibility: visible;
+        transition: all 1s linear;
+      }
+
+      &.collapse {
+        @include mixins.glass;
+        @include mixins.bgImg(overlay,url('/img/leaves.webp'),var(--opaque-background));
+        max-width: 10%;
+        max-height: 60rem;
+        border-radius: 5rem;
+        & > * {
+          // width: 0%;
+          filter: blur(20px);
+          opacity: 0;
+          visibility: hidden;
+        }
+        &:hover {
+          cursor: pointer;
+          filter: brightness(1.5);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  #project{
+    padding-inline: 1rem;
+  }
+}
+
+@media screen and (max-width:568px) {
+  #project {
+    & .project-container {
+      @include mixins.flexMixin(column,flex-start,center);
+  
+      & .card {
+        max-width: 100%;
+        max-height: 80rem;
+  
+        &.collapse {
+          max-width: 90%;
+          max-height: 5rem;
+        }
+      }
+    }
+  } 
+}

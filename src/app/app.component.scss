@@ -1,0 +1,20 @@
+@use '../sass/mixins';
+.container{
+  max-width: var(--max-width);
+  height: 100vh;
+  margin-inline: auto;
+  border-inline: 1rem solid var(--primary);
+  background-color: var(--background-color);
+  @include mixins.flexMixin(column,space-between);
+
+  & .main-container{
+    width: 100%;
+    flex-grow: 1;
+    border: 2px solid var(--secondary);
+    border-right: 3px solid transparent;
+    border-radius: 0.8rem;
+    overflow-y: auto;
+    @include mixins.customScrollbar;
+  }
+}
+

@@ -1,0 +1,22 @@
+@use "../../../sass/mixins";
+:host{
+  height: 100%;
+}
+header {
+  @include mixins.flexMixin;
+  @include mixins.bgImg;
+  height: inherit;
+  & .greeter {
+    transform: translate(-50%, 20%);
+    @include mixins.gradText;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    background-position: 70% center;
+    & .greeter {
+      transform: translate(-5%, 15%);
+    }
+  }
+}

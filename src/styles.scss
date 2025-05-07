@@ -1,0 +1,238 @@
+@use "./sass/mixins" as mixins;
+
+:root {
+  --bg-image: url("/img/aiml.jpg");
+  --box-shadow: 3px 2px 10px 1px #23232382;
+  --max-width: 1000px;
+  --background-color: #000;
+  --opaque-background: #00000045;
+  --highlight-start: #dd3e54;
+  --highlight-end: #6be585;
+  --brand-gradient-start: #acb6e5;
+  --brand-gradient-end: #86fde8;
+  --dark: #2a2a2a;
+  --opaque-dark: #3a3a3ac6;
+  --light: #eaeaea;
+  --opaque-light: #dadadac6;
+  --title-color: #4e9deb;
+  --border: #007bff;
+  --scrollbar-color-thumb: steelblue;
+  --scrollbar-color-track: rgb(52, 30, 52);
+  --primary: #0d1321;
+  --on-primary: #748cab;
+  --opaque-primary: #0d1321ce;
+  --secondary: #1d2d44;
+  --on-secondary: #f0ebd8;
+  --dark-secondary: #0056b3;
+  --tertiary: #396286;
+  --on-tertiary: #f7d8ba;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #333;
+  font-size: 2rem;
+  line-height: 1.6;
+  text-wrap-style: pretty;
+  hyphens: auto;
+}
+
+ul {
+  @include mixins.flexMixin(row, space-between);
+  list-style: none;
+}
+
+// Reusable Styles
+
+//card
+.card {
+  @include mixins.bg_txt(var(--light), var(--dark));
+  @include mixins.glass;
+  @include mixins.flexMixin(column);
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  line-height: normal;
+  box-shadow: var(--box-shadow);
+  max-width: 100%;
+  height: fit-content;
+  margin-inline: auto;
+
+  & .card-picture {
+    display: inline-block;
+    border-radius: inherit;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s;
+
+    & img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: 25rem;
+      border-top-right-radius: inherit;
+      border-top-left-radius: inherit;
+      object-position: center top;
+      object-fit: cover;
+    }
+  }
+
+  & .card-body {
+    padding: 2rem;
+
+    & .card-title {
+      font-weight: 900;
+      letter-spacing: 1px;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    & .card-description {
+      margin-bottom: 0.5rem;
+    }
+
+    & .card-sub {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+//Background and text Color
+.bg-p {
+  @include mixins.bg_txt(var(--primary), var(--on-primary));
+}
+
+.bg-s {
+  @include mixins.bg_txt(var(--secondary), var(--on-secondary));
+}
+
+.bg-t {
+  @include mixins.bg_txt(var(--tertiary), var(--on-tertiary));
+}
+
+.bg-l {
+  @include mixins.bg_txt(var(--light), var(--dark));
+}
+
+.bg-d {
+  @include mixins.bg_txt(var(--dark), var(--light));
+}
+
+.bg-i {
+  background: var(--bg-image) no-repeat center center/cover,
+    var(--opaque-primary);
+  background-blend-mode: overlay;
+}
+
+//buttons
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  margin: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: 0.3s;
+
+  &.btn-primary {
+    @include mixins.bg_txt();
+
+    &:hover {
+      @include mixins.bg_txt(var(--on-primary), var(--primary));
+    }
+  }
+
+  &.btn-secondary {
+    @include mixins.bg_txt(var(--secondary), var(--on-secondary));
+    &:hover {
+      @include mixins.bg_txt(var(--on-secondary), var(--secondary));
+    }
+  }
+
+  &.btn-tertiary {
+    @include mixins.bg_txt(var(--tertiary), var(--on-tertiary));
+
+    &:hover {
+      @include mixins.bg_txt(var(--on-tertiary), var(--tertiary));
+    }
+  }
+
+  &.btn-light {
+    @include mixins.bg_txt(var(--light), var(--dark));
+
+    &:hover {
+      @include mixins.bg_txt(var(--dark), var(--light));
+    }
+  }
+
+  &.btn-dark {
+    @include mixins.bg_txt(var(--dark), var(--light));
+
+    &:hover {
+      @include mixins.bg_txt(var(--light), var(--dark));
+    }
+  }
+
+  &.btn-brand {
+    @include mixins.gradBg(
+      var(--brand-gradient-start),
+      var(--brand-gradient-end),
+      var(--primary)
+    );
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.highlight {
+  @include mixins.gradText(var(--highlight-start), var(--highlight-end));
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-weight: 400;
+  }
+
+  .card {
+    & .card-body {
+      & .card-title {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1rem;
+  }
+
+  .card {
+    & .card-body {
+      & .card-title {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
