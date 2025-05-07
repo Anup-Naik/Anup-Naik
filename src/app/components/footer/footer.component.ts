@@ -34,7 +34,7 @@ import { Component } from '@angular/core';
         </li>
         <li>
           <a
-            href="mailto://anupnaik54810@gmail.com"
+            href="mailto:anupnaik54810@gmail.com"
             target="_blank"
             title="Email"
           >
