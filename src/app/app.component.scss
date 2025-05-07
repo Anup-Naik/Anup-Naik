@@ -1,5 +1,6 @@
 @use "../sass/mixins";
 .container {
+  position: relative;
   max-width: var(--max-width);
   height: 100vh;
   margin-inline: auto;

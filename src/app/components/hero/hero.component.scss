@@ -7,7 +7,7 @@ header {
   @include mixins.bgImg;
   height: inherit;
   & .greeter {
-    transform: translate(-50%, 20%);
+    transform: translate(-10%, 20%);
     @include mixins.gradText;
   }
 }
@@ -16,7 +16,7 @@ header {
   header {
     background-position: 70% center;
     & .greeter {
-      transform: translate(-5%, 15%);
+      transform: translate(-2%, 50%);
     }
   }
 }

@@ -7,5 +7,12 @@
   }
   & .about-body {
     padding: 5px;
+    & h3{
+      color: var(--title-color);
+      margin: 1rem 0;
+    }
+    & p{
+       margin-bottom: 2rem;
+    }
   }
 }

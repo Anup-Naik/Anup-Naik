@@ -23,6 +23,7 @@
   --opaque-primary: #0d1321ce;
   --secondary: #1d2d44;
   --on-secondary: #f0ebd8;
+  --opaque-secondary: #1d2d44d5;
   --dark-secondary: #0056b3;
   --tertiary: #396286;
   --on-tertiary: #f7d8ba;
@@ -130,11 +131,6 @@ ul {
   @include mixins.bg_txt(var(--dark), var(--light));
 }
 
-.bg-i {
-  background: var(--bg-image) no-repeat center center/cover,
-    var(--opaque-primary);
-  background-blend-mode: overlay;
-}
 
 //buttons
 .btn {
