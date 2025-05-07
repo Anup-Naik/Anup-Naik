@@ -29,14 +29,14 @@
 }
 
 @mixin glass() {
-  backdrop-filter: blur(3px) saturate(180%);
-  -webkit-backdrop-filter: blur(3px) saturate(180%);
+  backdrop-filter: blur(2px) saturate(180%);
+  -webkit-backdrop-filter: blur(2px) saturate(180%);
 }
 
 @mixin bgImg(
   $mode: overlay,
   $url: var(--bg-image),
-  $overlay: var(--background-color),
+  $overlay: var(--opaque-background),
   $xpos: center,
   $ypos: center
 ) {
@@ -44,7 +44,11 @@
   background-blend-mode: $mode;
 }
 
-@mixin customScrollbar($width: thin) {
+@mixin customCursor() {
+  cursor: url("/cursor.png"), auto;
+}
+@mixin customScrollbarY($width: thin) {
+  overflow-y: auto;
   @supports (scrollbar-width: auto) {
     & {
       scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);

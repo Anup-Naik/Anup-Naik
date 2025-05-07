@@ -15,7 +15,6 @@ nav {
     & .brand {
       font-size: 3rem;
       font-weight: 500;
-      margin-left: 1rem;
       letter-spacing: 1px;
       @include mixins.gradText(
         var(--brand-gradient-start),

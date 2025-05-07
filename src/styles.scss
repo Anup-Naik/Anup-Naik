@@ -1,11 +1,11 @@
 @use "./sass/mixins" as mixins;
 
 :root {
-  --bg-image: url("/img/aiml.jpg");
+  --bg-image: url("/img/circ.jpg");
   --box-shadow: 3px 2px 10px 1px #23232382;
   --max-width: 1000px;
   --background-color: #000;
-  --opaque-background: #00000045;
+  --opaque-background: #364e72a5;
   --highlight-start: #dd3e54;
   --highlight-end: #6be585;
   --brand-gradient-start: #acb6e5;
@@ -45,6 +45,7 @@ body {
   line-height: 1.6;
   text-wrap-style: pretty;
   hyphens: auto;
+  user-select: none;
 }
 
 ul {
@@ -59,8 +60,8 @@ ul {
   @include mixins.bg_txt(var(--light), var(--dark));
   @include mixins.glass;
   @include mixins.flexMixin(column);
-  padding: 0.5rem;
   border-radius: 1.5rem;
+  border: 2px solid var(--border);
   line-height: normal;
   box-shadow: var(--box-shadow);
   max-width: 100%;
@@ -69,7 +70,9 @@ ul {
 
   & .card-picture {
     display: inline-block;
-    border-radius: inherit;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    border-bottom: 2px solid var(--border);
     width: 100%;
     overflow: hidden;
     transition: 0.3s;
