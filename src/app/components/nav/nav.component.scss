@@ -1,4 +1,4 @@
-@use "../../../sass/mixins";
+ @use "../../../sass/mixins";
 :host {
   width: 100%;
 }
@@ -39,11 +39,11 @@ nav {
   nav {
     & .nav-container {
       & .brand {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
       }
       & .nav__btn {
         font-size: 2rem;
-        padding: 1.2rem 0.8rem;
+        padding: 1rem 0.8rem;
       }
     }
   }
@@ -54,11 +54,11 @@ nav {
     & .nav-container {
       padding-block: 0;
       & .nav__btn {
-        font-size: 1.8rem;
-        padding: 1rem 0.6rem;
+        font-size: 1.6rem;
+        padding: 0.2rem 0.4rem;
       }
       & .brand {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
   }
