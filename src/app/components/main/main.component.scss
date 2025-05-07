@@ -1,0 +1,48 @@
+@use "../../../sass/mixins";
+:host {
+  width: 100%;
+}
+main {
+  & section {
+    max-width: 90%;
+    background-color: var(--secondary);
+    color: var(--on-secondary);
+    margin: 2rem auto;
+    padding: 4rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--box-shadow);
+
+    & .section-title {
+      font-size: 3.2rem;
+      letter-spacing: 2px;
+      color: var(--title-color);
+      padding: 0 3rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    & section {
+      max-width: 95%;
+      padding: 3rem 2rem;
+
+      & .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  main {
+    & section {
+      padding: 2rem 1rem 3rem;
+    }
+  }
+}

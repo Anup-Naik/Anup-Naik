@@ -1,0 +1,80 @@
+<section id="project" (click)="overall($event)">
+  <h2 class="section-title">Projects</h2>
+  <div class="project-container">
+    <article class="card bg-t collapse" (click)="toggleCollapse(0)">
+      <picture class="card-picture">
+        <img src="/img/sps.jpeg" alt="Student Proctoring System" />
+      </picture>
+      <div class="card-body">
+        <h3 class="card-title">Student Proctoring System</h3>
+        <p class="card-description">
+          A web app designed to facilitate efficient tracking and monitoring of
+          student academic performance. It provides a robust platform where
+          students can submit personal, academic, and relevant details, which
+          faculty advisors can access and analyze to provide better guidance and
+          support.
+        </p>
+        <p class="card-sub">
+          <strong>Technologies used:</strong> HTML, CSS, JavaScript, Bootstrap,
+          Node.js, Express.js, EJS, MongoDB with Mongoose ODM.
+        </p>
+        <a
+          href="https://github.com/Anup-Naik/SPS"
+          target="_blank"
+          class="btn btn-dark"
+          >Git Repo</a
+        >
+      </div>
+    </article>
+
+    <article class="card bg-t collapse" (click)="toggleCollapse(1)">
+      <picture class="card-picture">
+        <img src="/img/chat-client.png" alt="Chat Client" />
+      </picture>
+      <div class="card-body">
+        <h3 class="card-title">Chat Client</h3>
+        <p class="card-description">
+          Chat Client is a responsive Angular application built to interface
+          with the Chat Server, providing a seamless front-end experience for
+          real-time messaging. It includes user authentication, dynamic chat
+          management, and live communication via Socket.IO-Client.
+        </p>
+        <p class="card-sub">
+          <strong>Technologies used:</strong> HTML, CSS, Angular, TypeScript,
+          RxJS, SCSS, SocketIO-Client.
+        </p>
+        <a
+          href="https://github.com/Anup-Naik/Chat-Client"
+          target="_blank"
+          class="btn btn-dark"
+          >Git Repo</a
+        >
+      </div>
+    </article>
+
+    <article class="card bg-t collapse" (click)="toggleCollapse(2)">
+      <picture class="card-picture">
+        <img src="/img/chat-client.png" alt="Chat Server" />
+      </picture>
+      <div class="card-body">
+        <h3 class="card-title">Chat Server</h3>
+        <p class="card-description">
+          A real-time chat application developed using Node.js, Express.js,
+          TypeScript, MongoDB, and Socket.IO. It features secure user
+          authentication and supports both private and group messaging with
+          real-time updates powered by WebSockets.
+        </p>
+        <p class="card-sub">
+          <strong>Technologies used:</strong> Node.js, Express.js, TypeScript,
+          MongoDB, Socket.IO.
+        </p>
+        <a
+          href="https://github.com/Anup-Naik/Chat-Server"
+          target="_blank"
+          class="btn btn-dark"
+          >Git Repo</a
+        >
+      </div>
+    </article>
+  </div>
+</section>

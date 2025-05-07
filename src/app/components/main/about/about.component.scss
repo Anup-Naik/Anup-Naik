@@ -1,0 +1,11 @@
+#about {
+  max-height: 100%;
+
+  & .about-header {
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  & .about-body {
+    padding: 5px;
+  }
+}

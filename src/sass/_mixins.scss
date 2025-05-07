@@ -1,0 +1,54 @@
+@mixin bg_txt($bg: var(--primary), $col: var(--on-primary)) {
+  background-color: $bg;
+  color: $col;
+}
+
+@mixin flexMixin($dire: row, $just: center, $align: center) {
+  display: flex;
+  flex-direction: $dire;
+  justify-content: $just;
+  align-items: $align;
+}
+
+@mixin gradBg(
+  $col1: var(--brand-gradient-start),
+  $col2: var(--brand-gradient-end),
+  $topcol: var(--dark)
+) {
+  background-image: linear-gradient(to right, $col1, $col2);
+  color: $topcol;
+}
+
+@mixin gradText(
+  $col1: var(--brand-gradient-start),
+  $col2: var(--brand-gradient-end)
+) {
+  background-image: linear-gradient(to right, $col1, $col2);
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin glass() {
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
+}
+
+@mixin bgImg(
+  $url: var(--bg-image),
+  $overlay: var(--background-color),
+  $xpos: center,
+  $ypos: center
+) {
+  background: $url no-repeat $xpos $ypos/cover, $overlay;
+  background-blend-mode: color-dodge;
+}
+
+@mixin customScrollbar($width: thin) {
+  @supports (scrollbar-width: auto) {
+    & {
+      scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+      scrollbar-width: $width;
+      scroll-behavior: smooth;
+    }
+  }
+}
