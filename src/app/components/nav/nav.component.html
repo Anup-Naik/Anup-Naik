@@ -1,22 +1,40 @@
 <nav>
-  <div class="nav-container bg-p">
-    <a href="#hero" class="btn"> <span class="brand"> Anup Naik</span></a>
-    <ul class="nav__list">
-      <li>
-        <a class="nav__btn btn btn-primary" href="#about">About</a>
-      </li>
-      <li>
-        <a class="nav__btn btn btn-primary" href="#project">Projects</a>
-      </li>
-      <li>
-        <a
-          href="/anup.pdf"
-          download="anupResume"
-          class="nav__btn btn btn-primary"
-        >
-          Resume
-        </a>
-      </li>
-    </ul>
+  <div [class]="{ 'nav-container': true, 'bg-p': true, 'no-bg': changeBg() }">
+    <a href="#hero" class="btn brand">Anup Naik</a>
+      <span class="menu__btn" (click)="toggleMenu(navlist)">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path
+            class="line"
+            d="M4 18L20 18"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            class="line"
+            d="M4 12L20 12"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            class="line"
+            d="M4 6L20 6"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </span>
+      <ul class="nav__list" #navlist>
+        <li>
+          <a class="nav__btn btn" href="#about">About</a>
+        </li>
+        <li>
+          <a class="nav__btn btn" href="#project">Projects</a>
+        </li>
+        <li>
+          <a href="/anup.pdf" download="anupResume" class="nav__btn btn">
+            Resume
+          </a>
+        </li>
+      </ul>
   </div>
 </nav>

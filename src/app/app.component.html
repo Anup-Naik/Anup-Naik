@@ -1,5 +1,5 @@
-<div class="container">
-  <app-nav />
+<div class="container" (scroll)="OnScroll($event)">
+  <app-nav [changeBg]="changeNavBg()"/>
 
   <app-hero />
   

@@ -1,20 +1,32 @@
- @use "../../../sass/mixins";
+@use "../../../sass/mixins";
 :host {
   width: 100%;
 }
 nav {
   position: sticky;
   top: 0;
-  overflow: hidden;
+  left: 0;
   z-index: 10;
-  @include mixins.glass;
-  
+  width: 100%;
+  &:not(:has(.no-bg)) {
+    @include mixins.glass;
+  }
+
   & .nav-container {
-    opacity: 0.9;
+    &:not(.no-bg) {
+      @include mixins.glass;
+    }
+    opacity: 0.8;
     @include mixins.flexMixin(row, space-between);
+    transition: 0.3s ease-in;
+    position: relative;
+
+    &.no-bg {
+      background-color: transparent;
+    }
 
     & .brand {
-      font-size: 3rem;
+      font-size: 2.8rem;
       font-weight: 500;
       letter-spacing: 1px;
       @include mixins.gradText(
@@ -22,14 +34,79 @@ nav {
         var(--brand-gradient-end)
       );
     }
-    
+
+    & .nav__btn {
+      color: var(--on-primary);
+      &:hover {
+        @include mixins.bg_txt(var(--on-primary), var(--primary));
+      }
+    }
+
+    & .menu__btn {
+      display: none;
+      width: 4rem;
+      height: 4rem;
+      margin-right: 2rem;
+      cursor: pointer;
+      &:hover {
+        & svg {
+          opacity: 1;
+          filter: brightness(1.2);
+        }
+      }
+      & svg {
+        height: 100%;
+        stroke: var(--brand-gradient-end);
+        opacity: 0.8;
+      }
+    }
   }
 }
 
-@media (max-width: 768px) {
-  
-}
-
 @media (max-width: 568px) {
- 
+  nav {
+    & .nav-container {
+      & .nav__list {
+        @include mixins.flexMixin(column, flex-end);
+        overflow: hidden;
+        position: absolute;
+        top: 6.2rem;
+        right: 2rem;
+        border-bottom: 0.5rem solid var(--border);
+        border-top: 0.2rem solid var(--border);
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        // padding: 0.4rem;
+        background-color: var(--secondary);
+        visibility: hidden;
+        filter: blur(0.5rem);
+        height: 0rem;
+        transition: all 0.5s ease-out;
+        &.active {
+          visibility: visible;
+          height: 16rem;
+          filter: blur(0px);
+        }
+
+        & li:not(:last-child){
+          border-bottom: 1px solid var(--on-primary);
+        }
+
+        & .nav__btn {
+          width: 15rem;
+          color: var(--on-primary);
+          text-align: center;
+          margin: 0;
+
+          &:hover {
+            color: var(--on-secondary);
+          }
+        }
+      }
+
+      & .menu__btn {
+        display: inline-block;
+      }
+    }
+  }
 }
