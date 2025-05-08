@@ -1,0 +1,93 @@
+@use "../../../../sass/mixins";
+#contact {
+  & article {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem 1rem 2rem;
+    border-radius: 10%;
+    & .contactForm {
+      @include mixins.flexMixin(column, center, flex-start);
+      margin: 0 auto;
+      max-width: 30rem;
+      & .form-control {
+        width: 100%;
+        margin-bottom: 1rem;
+        @include mixins.flexMixin(column, center, flex-start);
+        & label {
+          color: var(--title-color);
+          letter-spacing: 1px;
+          font-weight: 700;
+          font-size: 2.2rem;
+          margin-left: 2rem;
+          transform: translateY(3.2rem);
+          transition: 0.4s ease-out;
+
+          &:has(+ *:is(:focus, :user-invalid, :user-valid)) {
+            transform: translateY(0);
+          }
+
+          &:has(+ *:user-invalid) {
+            color: salmon;
+          }
+        }
+
+        & .error {
+          color: salmon;
+          visibility: hidden;
+          padding: 2px 2rem;
+          padding-right: 0;
+          transition: 0.3s ease-in;
+        }
+
+        & input,
+        & textarea {
+          font-size: 1.8rem;
+          border: none;
+          border-radius: 1rem;
+          padding: 0.5rem 2rem;
+          width: 100%;
+          background-color: transparent;
+          color: var(--on-tertiary);
+          border-bottom: 3px solid var(--border);
+          height: 4rem;
+
+          &:focus {
+            outline: none;
+          }
+          &:user-invalid {
+            border-bottom-color: salmon;
+            & + .error {
+              visibility: visible;
+            }
+          }
+        }
+
+        & textarea {
+          resize: none;
+          scrollbar-width: none;
+        }
+      }
+
+      & .submit {
+        color: mediumaquamarine;
+        visibility: hidden;
+        padding: 2px 2rem;
+        transition: 1s 1s ease-in;
+      }
+      & .btn {
+        margin-left: 3rem;
+        &:active {
+          & + .submit {
+            visibility: visible;
+          }
+        }
+        &:disabled {
+          cursor: not-allowed;
+          background-color: salmon;
+          background-blend-mode: overlay;
+          transform: none;
+        }
+      }
+    }
+  }
+}
