@@ -44,11 +44,11 @@
       @include mixins.flexMixin(column, flex-start, center);
 
       & .card {
-        max-width: 80%;
+        max-width: 90%;
         max-height: 80rem;
 
         &.collapse {
-          max-width: 80%;
+          max-width: 90%;
           max-height: 10rem;
         }
       }
@@ -63,11 +63,11 @@
       @include mixins.flexMixin(column, flex-start, center);
 
       & .card {
-        max-width: 95%;
+        max-width: 100%;
         max-height: 80rem;
 
         &.collapse {
-          max-width: 95%;
+          max-width: 100%;
           max-height: 10rem;
         }
       }
