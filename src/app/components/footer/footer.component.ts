@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-footer',
   imports: [],
   template: `
-    <footer>
+    <footer class="bg-p">
       <ul class="contact-details">
         <li>
           <a
@@ -46,6 +46,7 @@ import { Component } from '@angular/core';
           </a>
         </li>
       </ul>
+      <p class="copytext">&copy; 2025 by Anup Naik, All Rights Reserved</p>
     </footer>
   `,
   styleUrl: './footer.component.scss',

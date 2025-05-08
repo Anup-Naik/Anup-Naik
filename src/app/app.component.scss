@@ -1,9 +1,11 @@
 @use "../sass/mixins";
+
 .container {
-  position: relative;
   max-width: var(--max-width);
+  height: 100vh;
+  margin: 0 auto;
   background-color: var(--background-color);
   @include mixins.flexMixin(column, space-between);
+  overflow-x: hidden;
   @include mixins.customScrollbarY;
-
 }

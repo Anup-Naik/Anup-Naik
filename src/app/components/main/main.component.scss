@@ -4,14 +4,12 @@
 }
 main {
   & section {
-    max-width: 90%;
-    min-height: 50vh;
+    max-width: 96%;
+    min-height: 90vh;
     margin: 10rem auto;
     padding: 4rem;
     background-color: var(--secondary);
     color: var(--on-secondary);
-    border-radius: 1.5rem;
-    box-shadow: var(--box-shadow);
 
     & .section-title {
       font-size: 3.2rem;
@@ -28,8 +26,6 @@ main {
 @media (max-width: 768px) {
   main {
     & section {
-      max-width: 98%;
-      min-height: 70vh;
       padding: 6rem 3rem;
 
       & .section-title {
@@ -42,8 +38,7 @@ main {
 @media (max-width: 568px) {
   main {
     & section {
-      max-width: 98%;
-      padding: 4rem 0.5rem;
+      padding: 3rem 1rem;
     }
   }
 }

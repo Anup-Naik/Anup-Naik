@@ -41,7 +41,6 @@ body {
   text-wrap-style: pretty;
   hyphens: auto;
   user-select: none;
-  max-height:100vh;
 }
 
 ul {
@@ -126,7 +125,6 @@ ul {
   @include mixins.bg_txt(var(--dark), var(--light));
 }
 
-
 //buttons
 .btn {
   display: inline-block;
@@ -200,14 +198,13 @@ ul {
   }
 
   .btn {
-    padding: 0.8rem 1.2rem;
-    font-weight: 400;
+    padding-inline: 1.2rem;
   }
 
   .card {
     & .card-body {
       & .card-title {
-        font-size: 2rem;
+        font-size: 2.4rem;
       }
     }
   }
@@ -219,13 +216,13 @@ ul {
   }
 
   .btn {
-    padding: 0.8rem 1rem;
+    padding-inline: 0.8rem;
   }
 
   .card {
     & .card-body {
       & .card-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
       }
     }
   }

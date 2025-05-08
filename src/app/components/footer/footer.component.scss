@@ -4,25 +4,22 @@
 }
 
 footer {
+  @include mixins.flexMixin(column);
   padding: 1rem;
-  @include mixins.bg_txt(var(--primary), var(--on-primary));
   & .contact-details {
-    margin: 0 auto;
-    width: 30%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     & li {
-      margin: 0 2rem;
+      margin: 0.5rem;
       & svg {
-        height: 5rem;
+        height: 4rem;
         fill: var(--on-primary);
         border: 2px solid var(--on-primary);
-        padding: 2px;
-        border-radius: 50%;
+        border-radius: 25%;
         transition: 0.2s ease-in;
         &:hover {
           fill: var(--on-secondary);
           border-color: var(--on-secondary);
-          transform: scale(1.1);
+          transform: scale(0.9);
         }
       }
     }
@@ -30,22 +27,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-  footer {
-    & .contact-details {
-      width: 50%;
-      & li {
-        & svg {
-          height: 4.5rem;
-        }
-      }
-    }
-  }
+  
 }
 
 @media (max-width: 568px) {
-  footer {
-    & .contact-details {
-      width: 80%;
-    }
-  }
+  
 }

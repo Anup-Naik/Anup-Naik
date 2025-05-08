@@ -1,12 +1,10 @@
 #about {
-  height: 100%;
-
   & .about-header {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     align-items: center;
   }
   & .about-body {
-    padding: 5px;
+    padding: 0.5rem;
     & h3{
       color: var(--title-color);
       margin: 1rem 0;
