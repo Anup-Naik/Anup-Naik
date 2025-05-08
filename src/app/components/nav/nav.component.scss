@@ -81,7 +81,7 @@ nav {
         visibility: hidden;
         filter: blur(0.5rem);
         height: 0rem;
-        transition: all 0.5s ease-out;
+        transition: all 0.3s ease-out;
         &.active {
           visibility: visible;
           height: 16rem;
