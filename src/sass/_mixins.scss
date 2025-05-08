@@ -36,7 +36,7 @@
 @mixin bgImg(
   $mode: overlay,
   $url: var(--bg-image),
-  $overlay: var(--opaque-background),
+  $overlay: var(--overlay),
   $xpos: center,
   $ypos: center
 ) {
@@ -44,9 +44,6 @@
   background-blend-mode: $mode;
 }
 
-@mixin customCursor() {
-  cursor: url("/cursor.png"), auto;
-}
 @mixin customScrollbarY($width: thin) {
   overflow-y: auto;
   @supports (scrollbar-width: auto) {
