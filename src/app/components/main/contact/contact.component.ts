@@ -9,12 +9,11 @@ import { FormsModule } from '@angular/forms';
       <h2 class="section-title">Contact Me</h2>
       <article class="bg-t">
         <form
-          netlify
           method="post"
+          name="contact"
           class="contactForm"
-          name="contactForm"
-          data-netlify="true"
           #contactForm="ngForm"
+          netlify
         >
           <div class="form-control">
             <label for="email">Email</label>
