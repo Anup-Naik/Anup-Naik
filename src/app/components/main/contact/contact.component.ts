@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
           name="contact"
           class="contactForm"
           #contactForm="ngForm"
+          (ngSubmit)="OnSubmit(contactForm)"
           netlify
           data-netlify="true"
           netlify-honeypot="bot-field"
@@ -61,7 +62,7 @@ import { FormsModule } from '@angular/forms';
           >
             Submit
           </button>
-          <p [class]="{ submit: true, submitted: contactForm.submitted }">
+          <p [class]="{ submit: true, submitted: isSubmitted() }">
             Thank you for reaching out. I will contact you soon.
           </p>
         </form>
@@ -73,4 +74,31 @@ import { FormsModule } from '@angular/forms';
 export class ContactComponent {
   email = signal('');
   message = signal('');
+  isSubmitted = signal(false);
+
+  OnSubmit(form: NgForm) {
+    if (!form.valid) return;
+
+    const formData = new FormData();
+    formData.append('form-name', 'contact');
+    formData.append('email', this.email());
+    formData.append('message', this.message());
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => {
+        form.reset();
+        this.isSubmitted.set(true);
+
+        setTimeout(() => {
+          this.isSubmitted.set(false);
+        }, 5000);
+      })
+      .catch((e) => {
+        console.error('Error Submitting Form');
+      });
+  }
 }
