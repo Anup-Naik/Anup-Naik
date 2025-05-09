@@ -1,29 +1,37 @@
 @use "../../../../sass/mixins";
 #contact {
   & article {
-    width: 80%;
+    width: 100%;
+    max-width: 45rem;
     margin: 0 auto;
     padding: 5rem 1rem 2rem;
     border-radius: 10%;
     & .contactForm {
       @include mixins.flexMixin(column, center, flex-start);
       margin: 0 auto;
-      max-width: 30rem;
+      padding-top: 3rem;
+      max-width: 35rem;
       & .form-control {
         width: 100%;
-        margin-bottom: 1rem;
         @include mixins.flexMixin(column, center, flex-start);
         & label {
           color: var(--title-color);
           letter-spacing: 1px;
           font-weight: 700;
+          opacity: 0.7;
           font-size: 2.2rem;
           margin-left: 2rem;
           transform: translateY(3.2rem);
           transition: 0.4s ease-out;
+          &:has(+ textarea) {
+            transform: translateY(5rem);
+          }
 
           &:has(+ *:is(:focus, :user-invalid, :user-valid)) {
             transform: translateY(0);
+          }
+          &:has(+ *:is(:focus, :user-valid)) {
+            color: var(--on-secondary);
           }
 
           &:has(+ *:user-invalid) {
@@ -42,6 +50,7 @@
         & input,
         & textarea {
           font-size: 1.8rem;
+          line-height: normal;
           border: none;
           border-radius: 1rem;
           padding: 0.5rem 2rem;
@@ -63,6 +72,7 @@
         }
 
         & textarea {
+          height: 6rem;
           resize: none;
           scrollbar-width: none;
         }
@@ -70,17 +80,16 @@
 
       & .submit {
         color: mediumaquamarine;
-        visibility: hidden;
+        font-size: 1.8rem;
+        opacity: 0;
         padding: 2px 2rem;
-        transition: 1s 1s ease-in;
+        transition: 0.3s 0.5s ease-in;
+        &.submitted {
+          opacity: 1;
+        }
       }
       & .btn {
-        margin-left: 3rem;
-        &:active {
-          & + .submit {
-            visibility: visible;
-          }
-        }
+        margin: 1rem 0 0 3rem;
         &:disabled {
           cursor: not-allowed;
           background-color: salmon;

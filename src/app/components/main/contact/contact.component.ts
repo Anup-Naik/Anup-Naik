@@ -8,7 +8,13 @@ import { FormsModule } from '@angular/forms';
     <section id="contact">
       <h2 class="section-title">Contact Me</h2>
       <article class="bg-t">
-        <form class="contactForm" (ngSubmit)="OnSubmit()" #contactForm="ngForm">
+        <form
+          class="contactForm"
+          name="contactForm"
+          data-netlify="true"
+          (ngSubmit)="OnSubmit()"
+          #contactForm="ngForm"
+        >
           <div class="form-control">
             <label for="email">Email</label>
             <input
@@ -30,13 +36,21 @@ import { FormsModule } from '@angular/forms';
               [(ngModel)]="message"
               required
               autocomplete="off"
-              minlength="50"
-              maxlength="500"
+              minlength="30"
+              maxlength="250"
             ></textarea>
-            <p class="error">{{message().length}}/500 (Min. 50 characters)</p>
+            <p class="error">{{ message().length }}/250 (Min. 30 characters)</p>
           </div>
-          <button style="border: none;" class="btn btn-brand" [disabled]="!contactForm.valid">Submit</button>
-          <p class="submit">Thank You for Reaching out.</p>
+          <button
+            style="border: none;"
+            class="btn btn-brand"
+            [disabled]="!contactForm.valid"
+          >
+            Submit
+          </button>
+          <p [class]="{ submit: true, submitted: contactForm.submitted }">
+            Thank you for reaching out. I will contact you soon.
+          </p>
         </form>
       </article>
     </section>
