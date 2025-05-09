@@ -62,10 +62,10 @@ import { FormsModule, NgForm } from '@angular/forms';
           >
             Submit
           </button>
-          <p [class]="{ submit: true, submitted: isSubmitted() }">
-            Thank you for reaching out. I will contact you soon.
-          </p>
         </form>
+        <p [class]="{ submit: true, submitted: isSubmitted() }">
+          Thank you for reaching out. I will contact you soon.
+        </p>
       </article>
     </section>
   `,
@@ -91,6 +91,8 @@ export class ContactComponent {
     })
       .then(() => {
         form.reset();
+        this.email.set('');
+        this.message.set('');
         this.isSubmitted.set(true);
 
         setTimeout(() => {
