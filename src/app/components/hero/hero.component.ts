@@ -18,10 +18,11 @@ import {
         <img src="{{ '/logo/' + img + '.svg' }}" alt="skill" class="skill" />
         }
       </div>
+      <div class="greeter-container">
       <h1 class="greeter">
-        HI <br />I Am <span class="highlight">Anup Naik,</span> <br />A
-        <span class="highlight">MEAN-Stack</span> Developer
-      </h1>
+        <span class="highlight">Hi,</span>  <br />I Am <span class="highlight">Anup Naik,</span> <br />A
+        <span class="highlight">MEAN</span>-Stack Developer.
+      </h1></div>
     </header>
   `,
   styleUrl: './hero.component.scss',
@@ -36,8 +37,8 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
   skills!: HTMLImageElement[];
   velocity!: [number, number][];
   animationId!: number;
-  speedX = 1.2;
-  speedY = 0.4;
+  speedX = 1;
+  speedY = 0.5;
   boundAnimate: any;
   ngOnInit(): void {
     this.skillContainer =

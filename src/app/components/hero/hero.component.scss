@@ -3,49 +3,32 @@
 header {
   position: relative;
   @include mixins.flexMixin;
-  @include mixins.glass(20px);
-  padding: 1rem;
+  margin: 1rem;
   min-height: 90vh;
   margin-bottom: 10rem;
-  & .greeter {
-    transform: translate(-10%, 20%);
-    z-index: 10;
-    @include mixins.gradText;
+  & .greeter-container {
+    @include mixins.glass(5px);
+    background-color: var(--secondary);
+    border-radius: 10%;
+    padding: 10rem 2rem;
+    & .greeter {
+      z-index: 10;
+      @include mixins.gradText;
+    }
   }
 
   & .skill-container {
-    @include mixins.flexMixin(row,flex-end,flex-start);
-    opacity: 0.8;
+    @include mixins.flexMixin(row, flex-end, flex-start);
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(240, 248, 255, 0.238);
-    & .skill{
+    & .skill {
       height: 4rem;
       position: absolute;
-
-    }
-  }
-  
-}
-
-@media (max-width: 768px) {
-  header {
-    background-position: 70% center;
-    & .greeter {
-      transform: translate(-4%, 40%);
     }
   }
 }
 
-@media (max-width: 568px) {
-  header {
-    background-position: 70% center;
-    & .greeter {
-      transform: translate(5%, 40%);
-    }
-  }
-}

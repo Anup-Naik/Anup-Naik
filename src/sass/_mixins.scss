@@ -51,6 +51,7 @@
       scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
       scrollbar-width: $width;
       scroll-behavior: smooth;
+      scroll-padding-top: 10rem;
     }
   }
 }
