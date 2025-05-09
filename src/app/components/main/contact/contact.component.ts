@@ -10,10 +10,10 @@ import { FormsModule } from '@angular/forms';
       <article class="bg-t">
         <form
           netlify
+          method="post"
           class="contactForm"
           name="contactForm"
           data-netlify="true"
-          (ngSubmit)="OnSubmit()"
           #contactForm="ngForm"
         >
           <div class="form-control">
@@ -62,8 +62,4 @@ import { FormsModule } from '@angular/forms';
 export class ContactComponent {
   email = signal('');
   message = signal('');
-  OnSubmit() {
-    if (!this.email() || !this.message) return;
-    console.log(this.email(), this.message());
-  }
 }
