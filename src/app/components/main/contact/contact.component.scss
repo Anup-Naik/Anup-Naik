@@ -90,6 +90,9 @@
       }
       & .btn {
         margin: 1rem 0 0 3rem;
+        &:hover{
+          cursor: pointer;
+        }
         &:disabled {
           cursor: not-allowed;
           background-color: salmon;

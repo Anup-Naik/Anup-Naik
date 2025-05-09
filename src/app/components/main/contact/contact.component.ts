@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
       <h2 class="section-title">Contact Me</h2>
       <article class="bg-t">
         <form
+          netlify
           class="contactForm"
           name="contactForm"
           data-netlify="true"
@@ -42,6 +43,7 @@ import { FormsModule } from '@angular/forms';
             <p class="error">{{ message().length }}/250 (Min. 30 characters)</p>
           </div>
           <button
+            type="submit"
             style="border: none;"
             class="btn btn-brand"
             [disabled]="!contactForm.valid"
