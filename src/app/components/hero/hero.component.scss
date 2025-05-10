@@ -3,12 +3,13 @@
 header {
   position: relative;
   @include mixins.flexMixin;
-  margin: 1rem;
-  min-height: 90vh;
+  margin: 0.3rem;
+  min-height: 88vh;
   margin-bottom: 10rem;
   & .greeter-container {
     @include mixins.glass(5px);
     background-color: var(--secondary);
+    margin: 2rem;
     border-radius: 10%;
     padding: 10rem 2rem;
     & .greeter {
@@ -32,3 +33,16 @@ header {
   }
 }
 
+@media screen and (max-width: 568px) {
+  header {
+    & .greeter-container {
+      padding: 4rem 2rem;
+    }
+
+    & .skill-container {
+      & .skill {
+        height: 4rem;
+      }
+    }
+  }
+}

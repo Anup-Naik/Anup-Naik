@@ -21,7 +21,7 @@
           color: var(--title-color);
           letter-spacing: 1px;
           font-weight: 700;
-          opacity: 0.7;
+          opacity: 0.8;
           font-size: 2.2rem;
           margin-left: 2rem;
           transform: translateY(3.2rem);
@@ -81,7 +81,6 @@
         }
       }
 
-      
       & .btn {
         margin: 1rem 0 0 3rem;
         &:hover {
@@ -97,22 +96,56 @@
     }
 
     & .submit {
-        color: mediumaquamarine;
-        opacity: 0;
-        padding: 2px 2rem;
-        transition: 0.3s ease-in;
-        &.submitted {
-          opacity: 1;
-        }
+      color: mediumaquamarine;
+      opacity: 0;
+      padding: 2px 2rem;
+      transition: 0.3s ease-in;
+      &.submitted {
+        opacity: 1;
       }
+    }
   }
 }
 
+@media screen and (max-width: 568px) {
+  #contact {
+    & article {
+      width: 98%;
+      padding: 1.5rem 4rem 0.5rem;
+      & .contactForm {
+        padding-top: 3rem;
+        & .form-control {
+          & label {
+            font-size: 2rem;
+            &:has(+ textarea) {
+              transform: translateY(3.2rem);
+            }
+          }
 
-@media screen and (max-width:568px) {
-  #contact{
-    & article{
-      padding-block: 2rem;
+          & .error {
+            padding: 2px 1rem;
+          }
+
+          & input,
+          & textarea {
+            font-size: 1.6rem;
+            line-height: normal;
+            padding: 0.3rem 1.3rem;
+          }
+
+          & textarea {
+            height: 4rem;
+          }
+        }
+
+        & .btn {
+          margin: 1rem ;
+        }
+      }
+
+      & .submit {
+        padding: 2px 0.5rem;
+      }
     }
   }
 }

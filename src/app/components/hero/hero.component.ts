@@ -37,8 +37,8 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
   skills!: HTMLImageElement[];
   velocity!: [number, number][];
   animationId!: number;
-  speedX = 1;
-  speedY = 0.5;
+  speedX = 1.2;
+  speedY = 0.6;
   boundAnimate: any;
   ngOnInit(): void {
     this.skillContainer =
