@@ -57,4 +57,4 @@ Angular front-end application for the Chat-Server, providing a responsive and in
 
 ---
 
-⭐️ From [Anup-Naik](https://github.com/Anup-Naik)
+⭐️ From [Anup-Naik](https://stirring-manatee-d3640c.netlify.app/)
