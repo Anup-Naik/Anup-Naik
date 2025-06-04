@@ -30,7 +30,6 @@ Full-stack Web Developer specializing in MEAN stack development. I like building
 ![](https://img.shields.io/badge/Tools-Postman-informational?style=flat&logo=postman&logoColor=white&color=2bbc8a)
 
 ## 📊 GitHub Stats
-[![Anup's GitHub stats](https://github-readme-stats.vercel.app/api?username=Anup-Naik&show_icons=true&theme=radical)](https://github.com/Anup-Naik)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Anup-Naik&layout=compact&theme=radical)](https://github.com/Anup-Naik)
 
@@ -39,41 +38,17 @@ Full-stack Web Developer specializing in MEAN stack development. I like building
 ### [Student Proctoring System (SPS)](https://github.com/Anup-Naik/SPS)
 A comprehensive web application designed to facilitate efficient tracking and monitoring of student academic performance. Built using Node.js, Express, MongoDB, and Bootstrap.
 
-**Key Features:**
-- Role-based access for Admin, Faculty, and Students
-- Academic tracking and counseling system
-- Document management for student records
-- Graduation management with archiving system
-- Secure authentication with session management
-
 **Tech Stack:** Node.js, Express.js, MongoDB, Mongoose, EJS, Bootstrap, JavaScript
 
 ### [Chat-Server](https://github.com/Anup-Naik/Chat-Server)
 A real-time chat application backend built with Express.js, Socket.IO, and MongoDB, featuring user authentication, group chats, and direct messaging.
-
-**Key Features:**
-- Real-time messaging with Socket.IO
-- End-to-end encryption support
-- Group chat functionality
-- RESTful API for user and group management
-- JWT authentication
 
 **Tech Stack:** Node.js, Express.js, TypeScript, MongoDB, Socket.IO, JWT
 
 ### [Chat-Client](https://github.com/Anup-Naik/Chat-Client)
 Angular front-end application for the Chat-Server, providing a responsive and intuitive user interface for the real-time chat application.
 
-**Key Features:**
-- User authentication (signup/login)
-- Dashboard for chat management
-- Real-time messaging interface
-- Responsive design
-
 **Tech Stack:** Angular, TypeScript, RxJS, Socket.IO Client, Bootstrap
-
-## 📜 Certifications
-- [The Web Developer Boot Camp](https://www.udemy.com/certificate/UC-5cca9da4-7354-4f8b-adab-3e244ac35e7a/)
-- [Angular - The Complete Guide](https://www.udemy.com/certificate/UC-a2e5b19d-c06b-492f-b67d-f4db0818214e/)
 
 ## 🔗 Connect with Me
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anup-naik-607050196)
