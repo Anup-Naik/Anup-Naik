@@ -1,6 +1,9 @@
 @use "../../../sass/mixins";
 
 header {
+  font-family: "Niconne", cursive;
+  font-weight: 400;
+  font-style: normal;
   position: relative;
   @include mixins.flexMixin;
   margin: 0.3rem;
@@ -11,7 +14,7 @@ header {
     background-color: var(--secondary);
     margin: 2rem;
     border-radius: 10%;
-    padding: 10rem 2rem;
+    padding: 10rem 10rem;
     & .greeter {
       z-index: 10;
       @include mixins.gradText;

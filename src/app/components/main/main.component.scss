@@ -1,11 +1,13 @@
 @use "../../../sass/mixins";
+
 :host {
   width: 100%;
 }
+
 main {
   & section {
     max-width: 100%;
-    min-height: 70vh;
+    min-height: 90vh;
     margin: 20rem auto;
     padding: 4rem;
     background-color: var(--secondary);
@@ -21,6 +23,7 @@ main {
       margin-bottom: 3.5rem;
     }
   }
+
   & section:last-child {
     margin-bottom: 3rem;
   }
@@ -30,6 +33,7 @@ main {
   main {
     & section {
       padding: 6rem 3rem;
+      min-height: 70vh;
 
       & .section-title {
         text-align: center;

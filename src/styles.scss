@@ -1,7 +1,8 @@
 @use "./sass/mixins" as mixins;
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Niconne&family=Tangerine:wght@400;700&display=swap');
 
 :root {
-  --max-width: 1400px;
+  --max-width: 1200px; 
   --highlight-start: #aa4b6b;
   --highlight-end: #3b8d99;
   --brand-gradient-start: #acb6e5;
@@ -34,7 +35,7 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Delius","Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #333;
   font-size: 2rem;
   line-height: 1.6;
