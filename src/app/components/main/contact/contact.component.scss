@@ -5,7 +5,7 @@
     max-width: 45rem;
     margin: 0 auto;
     padding: 5rem 2rem 2rem;
-    border-radius: 10%;
+    border-radius: 2%;
     & .contactForm {
       @include mixins.flexMixin(column, center, flex-start);
       margin: 0 auto;
@@ -88,8 +88,7 @@
         }
         &:disabled {
           cursor: not-allowed;
-          background-color: salmon;
-          background-blend-mode: overlay;
+          filter: brightness(0.5);
           transform: none;
         }
       }

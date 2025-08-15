@@ -19,6 +19,8 @@ import { ContactComponent } from './components/main/contact/contact.component';
 export class AppComponent {
   changeNavBg = signal(true);
   OnScroll(e: any) {
+    (e.target as HTMLElement).querySelector(".nav__list")?.classList.remove("active")
+
     if (e.target.firstChild.getBoundingClientRect().top < -200) {
       this.changeNavBg.set(false);
     } else {
