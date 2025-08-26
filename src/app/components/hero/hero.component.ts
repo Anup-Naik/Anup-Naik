@@ -28,7 +28,7 @@ import {
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
-  imgs = Array.from({ length: 15 }).map((_, i) => {
+  imgs = Array.from({ length: 17 }).map((_, i) => {
     return (i + 1).toString().padStart(2, '0');
   });
   zone = inject(NgZone);
