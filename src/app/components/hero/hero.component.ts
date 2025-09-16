@@ -21,7 +21,7 @@ import {
       <div class="greeter-container">
       <h1 class="greeter">
         <span class="highlight">Hi,</span>  <br />I Am <span class="highlight">Anup Naik,</span> <br />A
-        <span class="highlight">Web</span> Developer.
+        <span class="highlight">FullStack</span> Developer.
       </h1></div>
     </header>
   `,
