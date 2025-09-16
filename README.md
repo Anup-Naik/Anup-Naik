@@ -2,8 +2,6 @@
 <h1 align=center>
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Anup-Naik&layout=donut-vertical&theme=radical)](https://github.com/Anup-Naik)
-
-[![Anup's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Anup-Naik&layout=compact)](https://github.com/Anup-Naik)
 </h1>
 
 
