@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       <ul class="contact-details">
         <li>
           <a
-            href="https://www.linkedin.com/in/anup-naik-607050196"
+            href="https://www.linkedin.com/in/anupnaik01"
             target="_blank"
             title="LinkedIn"
           >
